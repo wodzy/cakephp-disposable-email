@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a reproducible problem in the CakeDisposableEmail plugin
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in the sections
+        below so the issue can be reproduced quickly.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: The notDisposable rule accepted jane@example.com but I expected it to be rejected...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Your `DisposableEmail` configuration and the validator or command you ran.
+      render: php
+      placeholder: |
+        // config/app_local.php
+        'DisposableEmail' => ['domains' => ['example.com']],
+
+        // UsersTable::validationDefault()
+        $validator->add('email', 'notDisposable', ['rule' => 'notDisposable', 'provider' => 'disposableEmail']);
+    validations:
+      required: true
+  - type: input
+    id: php-version
+    attributes:
+      label: PHP version
+      placeholder: "8.3.10"
+    validations:
+      required: true
+  - type: input
+    id: cakephp-version
+    attributes:
+      label: CakePHP version
+      placeholder: "5.4.3"
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin and wodzy/disposable-email versions
+      placeholder: "cakephp-disposable-email 1.0.0, disposable-email 1.0.0"
+    validations:
+      required: true

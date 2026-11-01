@@ -1,0 +1,15 @@
+includes:
+    - vendor/cakedc/cakephp-phpstan/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+
+parameters:
+    level: max
+    phpVersion: 80200
+    paths:
+        - src
+        - config
+        - tests
+    bootstrapFiles:
+        - tests/bootstrap.php
+    treatPhpDocTypesAsCertain: false
