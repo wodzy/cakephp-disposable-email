@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-31
+
+### Fixed
+- The "new issue" page linked to GitHub Discussions, which are not enabled. It now
+  links to the usage section of the README. No change to the installed package.
+
 ## [1.0.0] - 2026-10-31
 
 First release. Requires PHP 8.2+, CakePHP 5.1+ and `wodzy/disposable-email` ^1.0.
@@ -29,5 +35,6 @@ First release. Requires PHP 8.2+, CakePHP 5.1+ and `wodzy/disposable-email` ^1.0
 - `Wodzy\DisposableEmail\BlocklistInterface` and `DisposableEmailConfig` registered in the
   DI container; both commands receive their dependencies through their constructor.
 
-[Unreleased]: https://github.com/wodzy/cakephp-disposable-email/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/wodzy/cakephp-disposable-email/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/wodzy/cakephp-disposable-email/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/wodzy/cakephp-disposable-email/releases/tag/v1.0.0
